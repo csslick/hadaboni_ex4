@@ -4,11 +4,16 @@
 	$("article").on("mouseover",function(){		
 	
 		// 변수 vid에 video파일 참조
-		var vid = $(this).find("video").get(0);
+		var video_index = $(this).index();
+		var vid = document.querySelectorAll('article video');
+		
 		// 동영상의 재생위치를 처음(0)으로 설정
-		vid.currentTime=0;
-		// 동영상을 재생
-		vid.play();	
+		for(var i in vid){	
+		    vid[i].currentTime = 0;
+		}
+		
+		// 동영상 재생
+		vid[video_index].play();	
 		
 		$(this).stop().animate({"width":"35%"},1000,function(){
 			//article이 넓어진 바로 후에 아래 구문이 실행됩니다.
