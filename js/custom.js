@@ -4,7 +4,7 @@
 	$("article").on("mouseover",function(){		
 	
 		// 변수 vid에 video파일 참조
-		var video_index = $(this).index();
+		var video_index = $(this).index(); console.log(video_index);
 		var vid = document.querySelectorAll('article video');
 		
 		// 동영상의 재생위치를 처음(0)으로 설정
