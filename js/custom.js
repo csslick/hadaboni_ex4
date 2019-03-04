@@ -11,8 +11,12 @@
 		vid[video_index].currentTime = 0;
 	
 		// 동영상 재생
-		vid[video_index].pause();
-		vid[video_index].play();	
+		var playPromise = vid[video_index].play();	
+		if (playPromise !== null){
+		    playPromise.catch(function(){
+		        vid[video_index].play();
+		    })
+		}
 		
 		$(this).stop().animate({"width":"35%"},1000,function(){
 			//article이 넓어진 바로 후에 아래 구문이 실행됩니다.
