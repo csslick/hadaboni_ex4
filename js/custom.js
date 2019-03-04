@@ -8,7 +8,7 @@
 		var vid = document.querySelectorAll('article video');
 		
 		// 동영상의 재생위치를 처음(0)으로 설정
-		for(var i in vid){	
+		for(var i = 0; i < vid.length; i++){	
 		    vid[i].currentTime = 0;
 		}
 		
