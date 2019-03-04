@@ -11,6 +11,7 @@
 		vid[video_index].currentTime = 0;
 	
 		// 동영상 재생
+		vid[video_index].pause();
 		vid[video_index].play();	
 		
 		$(this).stop().animate({"width":"35%"},1000,function(){
